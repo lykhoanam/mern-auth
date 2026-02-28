@@ -1,0 +1,4 @@
+{
+    "mongoDB_URI":"mongodb+srv://lykhoanamvn:bjn0816113413@cluster0.mqk62rj.mongodb.net/?appName=Cluster0",
+    "jwtSecret": "secrettoken"
+}
