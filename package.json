@@ -7,7 +7,9 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \" npm run server\" \"npm run client\"",
-    "test": "cross-env NODE_ENV=development jest "
+    "test": "cross-env NODE_ENV=development jest ",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "LKN",
@@ -19,6 +21,7 @@
     "express-validator": "^7.3.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^9.0.0",
+    "path": "^0.12.7",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0"
   },
