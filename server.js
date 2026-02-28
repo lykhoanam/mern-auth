@@ -1,9 +1,8 @@
+require('dotenv').config();
+
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require("path");
-const config = require('config');
-const node_env = config.get("NODE_ENV");
-
 
 const app = express();
 
@@ -21,7 +20,7 @@ app.use("/api/auth", require("./routes/api/auth"))
 app.use("/api/users", require('./routes/api/users'))
 
 // production
-if (node_env === "production") {
+if (process.env.NODE_ENV === "production") {
   // Serve static files from React build
   app.use(express.static(path.join(__dirname, "client/build")));
 
